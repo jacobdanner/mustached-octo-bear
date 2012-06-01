@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.js"></script>
+<script type="text/javascript" src="vendor/bootstrap/2.0.3/js/bootstrap.js"></script>
+<script type="text/javascript" src="vendor/fancybox/2.0.6/helpers/jquery.fancybox-buttons.js"></script>
+<script type="text/javascript" src="vendor/fancybox/2.0.6/helpers/jquery.fancybox-media.js"></script>
+<script type="text/javascript" src="vendor/fancybox/2.0.6/helpers/jquery.fancybox-thumbs.js"></script>
+<script type="text/javascript" src="vendor/fancybox/2.0.6/jquery.fancybox.js"></script>
+<script type="text/javascript" src="vendor/fancybox/2.0.6/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="vendor/GBKS-Wookmark-jQuery-25818a8/jquery.wookmark.js"></script>
+<script type="text/javascript" src="vendor/imagesloaded/2.0.1/jquery.imagesloaded.js"></script>
+<script type="text/javascript" src="vendor/jquery/1.7.2/jquery.js"></script>
+<script type="text/javascript" src="vendor/jquery.imagesloaded.js"></script>
+<script type="text/javascript" src="vendor/jquery.wookmark.js"></script>
+<script type="text/javascript" src="vendor/modernizr-2.5.3.js"></script>
+<script type="text/javascript" src="vendor/Sebobo-jquery.rondell-e16e149/js/demohelpers.js"></script>
+<script type="text/javascript" src="vendor/Sebobo-jquery.rondell-e16e149/js/jquery.fancybox-1.3.4.pack.js"></script>
+<script type="text/javascript" src="vendor/Sebobo-jquery.rondell-e16e149/js/jquery.rondell.js"></script>
+<script type="text/javascript" src="vendor/Sebobo-jquery.smallipop-67a3f4a/lib/demohelpers.js"></script>
+<script type="text/javascript" src="vendor/Sebobo-jquery.smallipop-67a3f4a/lib/jquery.smallipop.js"></script>
+<link rel="stylesheet" href="vendor/bootstrap/2.0.3/css/bootstrap-responsive.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="vendor/bootstrap/2.0.3/css/bootstrap.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="vendor/css/reset.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="vendor/css/style.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="vendor/fancybox/2.0.6/helpers/jquery.fancybox-buttons.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="vendor/fancybox/2.0.6/helpers/jquery.fancybox-thumbs.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="vendor/fancybox/2.0.6/jquery.fancybox.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="vendor/Sebobo-jquery.rondell-e16e149/css/jquery.rondell.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="vendor/Sebobo-jquery.rondell-e16e149/css/screen.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="vendor/Sebobo-jquery.smallipop-67a3f4a/css/jquery.smallipop.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="vendor/Sebobo-jquery.smallipop-67a3f4a/css/screen.css" type="text/css" media="all"/>
+</head>
+<body>
+<div id="container">
+<header><h1> example using jquery wookmark</h1>
+<p>Resize and/or click on item to trigger updates</p>
+</header>
+</div>
+<div id="main" role="main">
+<ul id="tiles">
+<li><img src="http://images.craigslist.org/5Gd5K35H63k03Jb3p6c618fe90f0e5b8a1ea1.jpg" width="200"/><p>WHIRLPOOL REFIRIGERATOR FREEZER + VINTAGE HOME DEEP FREEZER (EVERETT MALL WAY)</p></li>
+<li><img src="http://images.craigslist.org/5G25F95J13Ff3Ia3N1c611e835d7d1c0718c8.jpg" width="200"/><p>WHIRLPOOL REFIRIGERATOR FREEZER + VINTAGE HOME DEEP FREEZER (EVERETT MALL WAY)</p></li>
+<li><img src="http://images.craigslist.org/5Ne5G75S13F73I53Ncc61e340cbb60bf01f18.jpg" width="200"/><p>WHIRLPOOL REFIRIGERATOR FREEZER + VINTAGE HOME DEEP FREEZER (EVERETT MALL WAY)</p></li>
+<li><img src="http://images.craigslist.org/5Lb5R45Ma3G83Ma3Jdc61248d063bb8301acb.jpg" width="200"/><p>WHIRLPOOL REFIRIGERATOR FREEZER + VINTAGE HOME DEEP FREEZER (EVERETT MALL WAY)</p></li>
+<li><img src="http://images.craigslist.org/5G95F85H23Ee3K53Jfc6123e4158d9d4b13dc.jpg" width="200"/><p>Table Saw - JET JST-10 (Kent)</p></li>
+<li><img src="http://images.craigslist.org/5I35Lc5Mb3Ea3M93Jbc61fda495f30a001fd4.jpg" width="200"/><p>Table Saw - JET JST-10 (Kent)</p></li>
+<li><img src="http://images.craigslist.org/5L45V05E13K83Ld3H8c6120d1dd1c35a31fb8.jpg" width="200"/><p>twin sealy box spring only (south everett/north mill creek)</p></li>
+<li><img src="http://images.craigslist.org/5Gf5H85Mb3L83o83N3c6107c28e9acc02177c.jpg" width="200"/><p>twin sealy box spring only (south everett/north mill creek)</p></li>
+<li><img src="http://images.craigslist.org/5N75Ed5K73G83p03H8c61be66833a2d9b1514.jpg" width="200"/><p>twin sealy box spring only (south everett/north mill creek)</p></li>
+<li><img src="http://images.craigslist.org/5G75F15M93Ed3K73M3c5e14f70e0aef441cb2.jpg" width="200"/><p>Concrete / fill  (gig harbor)</p></li>
+<li><img src="http://images.craigslist.org/5Gd5Kc5J93Eb3Ic3Fdc5e2970ad3105e11053.jpg" width="200"/><p>Concrete / fill  (gig harbor)</p></li>
+<li><img src="http://images.craigslist.org/5Nd5Ga5M13E13G73H4c61fb55ef77ccf41595.jpg" width="200"/><p>Treadmill (Kenmore)</p></li>
+<li><img src="http://images.craigslist.org/5Lb5F75P03Ib3N23lfc616697dbbb65fc13d5.jpg" width="200"/><p>Treadmill (Kenmore)</p></li>
+<li><img src="http://images.craigslist.org/5La5F35U03K63I43N2c61db3ddd3afdc7194a.jpg" width="200"/><p>Free Pool Table and Ping Pong Table (Lakewood)</p></li>
+<li><img src="http://images.craigslist.org/5Ne5F55H43La3Fb3Jec619f9279aace7a1b02.jpg" width="200"/><p>Free Pool Table and Ping Pong Table (Lakewood)</p></li>
+<li><img src="http://images.craigslist.org/5Ld5Kd5Ha3Ee3Nc3Hfc614db21bc5566e1ebd.jpg" width="200"/><p>Free Pool Table and Ping Pong Table (Lakewood)</p></li>
+<li><img src="http://images.craigslist.org/5N55Ed5F23Mc3Ld3Hdc618d08ff84988e1f45.jpg" width="200"/><p>Ikea shelves (Redmond (downtown))</p></li>
+<li><img src="http://images.craigslist.org/5L95Kd5Fa3K13L63pbc612da06494a98a18bb.jpg" width="200"/><p>Ikea shelves (Redmond (downtown))</p></li>
+<li><img src="http://images.craigslist.org/5Nb5M95R23If3L73l0c6160c0739d23ca1f19.jpg" width="200"/><p>Old Fir Door W/Window (South Tacoma)</p></li>
+<li><img src="http://images.craigslist.org/5G55Q45Hd3E13L83H3c6153dffa1590241bdd.jpg" width="200"/><p>Old Fir Door W/Window (South Tacoma)</p></li>
+<li><img src="http://images.craigslist.org/5I65N85Me3K33La3J3c61d9de14b48ebd1696.jpg" width="200"/><p>Free used decking boards (Renton Highlands)</p></li>
+<li><img src="http://images.craigslist.org/5If5E35Ff3Ee3L13H7c61044eca8952231813.jpg" width="200"/><p>Free used decking boards (Renton Highlands)</p></li>
+<li><img src="http://images.craigslist.org/5T25Eb5K53Mb3J13N1c61c27ed48803fa147e.jpg" width="200"/><p>Free Sample Paint (West Seattle)</p></li>
+<li><img src="http://images.craigslist.org/5Id5Nd5La3Eb3Ld3l9c6172a1ee76bcea1f50.jpg" width="200"/><p>Free Sample Paint (West Seattle)</p></li>
+<li><img src="http://images.craigslist.org/5Nb5Eb5K93K23Gb3L2c615c877db3ea6611cb.jpg" width="200"/><p>kitchen countertops (federal way)</p></li>
+<li><img src="http://images.craigslist.org/5Ic5E15M33G93I63J5c613086efb5d4e91924.jpg" width="200"/><p>kitchen countertops (federal way)</p></li>
+<li><img src="http://images.craigslist.org/5Le5Fa5R53K83Id3F2c6103e277b8b22f1e38.jpg" width="200"/><p>hollow core door slab (federal way)</p></li>
+<li><img src="http://images.craigslist.org/5N85Kd5H23G33L53Jfc617ce0ac21e79517a1.jpg" width="200"/><p>hollow core door slab (federal way)</p></li>
+<li><img src="http://images.craigslist.org/5Na5Lb5Q33Id3Lc3Nec618cd961186a5216f6.jpg" width="200"/><p>free end table and monitor (port orchard)</p></li>
+<li><img src="http://images.craigslist.org/5Eb5Hf5Ja3Kd3If3N9c615325211d050416aa.jpg" width="200"/><p>free end table and monitor (port orchard)</p></li>
+<li><img src="http://images.craigslist.org/5V35K45U03E63G83Kdc5ubd3d0cd8b4041919.jpg" width="200"/><p>FREE HotTub Hot Tub FREE (N. Seattle)</p></li>
+<li><img src="http://images.craigslist.org/5Ne5H55M23mb3If3F6c5uc599b012fdf21bb2.jpg" width="200"/><p>FREE HotTub Hot Tub FREE (N. Seattle)</p></li>
+<li><img src="http://images.craigslist.org/5L95F75P33Kc3Ja3H8c5u673c53d81abf1105.jpg" width="200"/><p>FREE HotTub Hot Tub FREE (N. Seattle)</p></li>
+<li><img src="http://images.craigslist.org/5L15G25K83Ie3Lc3N4c5uc447bb2bf1581491.jpg" width="200"/><p>FREE HotTub Hot Tub FREE (N. Seattle)</p></li>
+<li><img src="http://images.craigslist.org/5I75Y65M53Gf3M63odc610dcd6603c9841e20.jpg" width="200"/><p>Free hottub (Lacey, wa)</p></li>
+<li><img src="http://images.craigslist.org/5L45T25F93L53Fd3H9c6168e7979b81e611d6.jpg" width="200"/><p>Free hottub (Lacey, wa)</p></li>
+<li><img src="http://images.craigslist.org/5E55F75J33Mb3Je3N6c6177fe5fd9d6dd1e27.jpg" width="200"/><p>Free concrete milepost and chunks (Ravenna (Seattle))</p></li>
+<li><img src="http://images.craigslist.org/5I15O25K73G53Kf3Icc61f37b24f620401baa.jpg" width="200"/><p>Free concrete milepost and chunks (Ravenna (Seattle))</p></li>
+<li><img src="http://images.craigslist.org/5Gf5W05H83K83Mb3J9c61b2f5fb91d34d1e42.jpg" width="200"/><p>Free concrete milepost and chunks (Ravenna (Seattle))</p></li>
+<li><img src="http://images.craigslist.org/5L45G35K33nd3K73o1c5r6220974ab94a1cbb.jpg" width="200"/><p>FREE COUCH and LOVE SEAT  (NE Tacoma)</p></li>
+<li><img src="http://images.craigslist.org/5K85H95M63M73J83Nfc5r0f0bde789eac140d.jpg" width="200"/><p>FREE COUCH and LOVE SEAT  (NE Tacoma)</p></li>
+<li><img src="http://images.craigslist.org/5Nc5I75E53Ed3Gd3Lfc6168376864333e10fc.jpg" width="200"/><p>FREE painting and moving boxes (South Bellevue)</p></li>
+<li><img src="http://images.craigslist.org/5O45Ee5R43L23M53J3c6159bc9d5342b017f1.jpg" width="200"/><p>FREE painting and moving boxes (South Bellevue)</p></li>
+<li><img src="http://images.craigslist.org/5G35Z25Mf3E53m83F9c61814c94f95b24125f.jpg" width="200"/><p>FREE painting and moving boxes (South Bellevue)</p></li>
+<li><img src="http://images.craigslist.org/5Gf5Fb5Mc3Ec3lf3Hac61a06fb78318e71de8.jpg" width="200"/><p>FREE painting and moving boxes (South Bellevue)</p></li>
+<li><img src="http://images.craigslist.org/5V05Eb5Jd3n03J53N5c61c767f88940f21d15.jpg" width="200"/><p>disposable cooler/ perishable shipping container (South Everett/Silver Lake)</p></li>
+<li><img src="http://images.craigslist.org/5L55G95Z43K73Fc3Lfc618eca2789c5471e9a.jpg" width="200"/><p>disposable cooler/ perishable shipping container (South Everett/Silver Lake)</p></li>
+<li><img src="http://images.craigslist.org/5Kd5M95Je3k53L43Mac5q0ebc009efde31cb6.jpg" width="200"/><p>FREE - Christmas Tree (North Seattle)</p></li>
+<li><img src="http://images.craigslist.org/5I25F75He3Ld3l03Hdc5q39986735d11913ac.jpg" width="200"/><p>FREE - Christmas Tree (North Seattle)</p></li>
+<li><img src="http://images.craigslist.org/5Kd5Hf5P13Ge3F33Ndc5n434fa7419f531f27.jpg" width="200"/><p>FREE TABLE - Used as a workstation / desk (Kent)</p></li>
+<li><img src="http://images.craigslist.org/5L25E45H63G43La3N4c5nd1554a96f34116a6.jpg" width="200"/><p>FREE TABLE - Used as a workstation / desk (Kent)</p></li>
+<li><img src="http://images.craigslist.org/5L55K95J43F83I63pac5nf02fa7c85a4a10ac.jpg" width="200"/><p>FREE TABLE - Used as a workstation / desk (Kent)</p></li>
+<li><img src="http://images.craigslist.org/5E35K55F93Ic3F63p4c61182229100a161088.jpg" width="200"/><p>Office desk w/ 2 file cabinets (Fremont)</p></li>
+<li><img src="http://images.craigslist.org/5H35J15Mc3kd3Ge3I1c61fee7b6f8e84b1775.jpg" width="200"/><p>Office desk w/ 2 file cabinets (Fremont)</p></li>
+</ul>
+</div>
+<!-- Once the images are loaded, initalize the Wookmark plug-in. -->
+  <script type="text/javascript">
+    $('#tiles').imagesLoaded(function() {
+      // Prepare layout options.
+      var options = {
+        autoResize: true, // This will auto-update the layout when the browser window is resized.
+        container: $('#main'), // Optional, used for some extra CSS styling
+        offset: 2, // Optional, the distance between grid items
+        itemWidth: 210 // Optional, the width of a grid item
+      };
+      
+      // Get a reference to your grid items.
+      var handler = $('#tiles li');
+      
+      // Call the layout function.
+      handler.wookmark(options);
+      
+      // Capture clicks on grid items.
+      handler.click(function(){
+        // Randomize the height of the clicked item.
+        var newHeight = $('img', this).height() + Math.round(Math.random()*300+30);
+        $(this).css('height', newHeight+'px');
+        
+        // Update the layout.
+        handler.wookmark();
+      });
+    });
+  </script>
+</body>
+</html>

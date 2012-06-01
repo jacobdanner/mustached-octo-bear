@@ -1,0 +1,281 @@
+@import "mixins";
+
+/* smallipop css */
+
+.smallipopHint { display:none; }
+
+#smallipop {
+  position:absolute;
+  display:none;
+  top: 0;
+  left: 0;
+  background-color:#314b64;
+  border:1px solid #0f161e;
+  color:#d2dfe7;
+  z-index:9999;
+  max-width:400px;
+  
+  .sipContent { padding:10px; }
+  
+  .sipArrow, .sipArrowBorder {
+    position:absolute;
+    left:50%;
+    height:0; width:0;
+  }
+  .sipArrow {
+    bottom:-20px; 
+    margin-left:-10px;
+    border:10px solid transparent;
+  }
+  .sipArrowBorder {
+    bottom:-24px;
+    margin-left:-12px;
+    border:12px solid transparent;
+  }
+  &.sipAlignLeft {
+    .sipArrow { margin-left:0; left:auto; right:20px; }
+    .sipArrowBorder { margin-left:0; left:auto; right:18px; }
+  }
+  &.sipAlignRight {
+    .sipArrow { margin-left:0; left:20px; right:auto; }
+    .sipArrowBorder { margin-left:0; left:18px; right:auto; }
+  }
+  &.sipAlignBottom {
+    .sipArrow { bottom:auto; top:-20px; }
+    .sipArrowBorder { bottom:auto; top:-24px; }
+  }
+  
+  &.sipPositionedLeft {
+    .sipArrow,
+    .sipArrowBorder {
+      right: -16px; left: auto; top:50%; bottom:auto;
+      border-width: 8px;
+      margin: -8px 0 0;
+    }
+    .sipArrowBorder {
+      right: -20px;
+      border-width: 10px;
+      margin: -10px 0 0;
+    }
+  }
+  
+  &.sipPositionedRight {
+    .sipArrow,
+    .sipArrowBorder {
+      left: -16px; right:auto; top:50%; bottom:auto;
+      border-width: 8px;
+      margin: -8px 0 0;
+    }
+    .sipArrowBorder {
+      left: -20px;
+      border-width: 10px;
+      margin: -10px 0 0;
+    }
+  }
+  
+  a { color:#98cbea; }
+}
+
+/* default theme */
+#smallipop.default {
+  text-shadow:0 -1px 1px #0f161e;
+  .sipContent { border-top:1px solid #586d82; }
+  
+  a { text-shadow:0 -1px 1px #0f161e; }
+  
+  .sipArrow { border-color:#1a2634 transparent transparent transparent; }
+  .sipArrowBorder { border-color:#0f161e transparent transparent transparent; }
+  
+  &.sipAlignBottom {
+    .sipArrow { border-color:transparent transparent #1a2634 transparent; }
+    .sipArrowBorder { border-color:transparent transparent #0f161e transparent; }
+  }
+  
+  &.sipPositionedLeft {
+    .sipArrow { border-color:transparent transparent transparent #1a2634; }
+    .sipArrowBorder { border-color:transparent transparent transparent #0f161e; }
+  }
+  &.sipPositionedRight {
+    .sipArrow { border-color:transparent #1a2634 transparent transparent; }
+    .sipArrowBorder { border-color:transparent #0f161e transparent transparent; }
+  }
+}
+.cssgradients.rgba #smallipop.default {
+  background-color:transparent;
+  @include linear-gradient(rgba(49, 75, 100, 0.9), rgba(26, 38, 52, 0.9)); /* Fallback for opera */
+  @include radial-gradient(50% -100px, circle contain, rgba(49, 75, 100, 0.9) 100px, rgba(33, 50, 66, 0.9) 130px, rgba(26, 38, 52, 0.9) 150px);
+}
+.boxshadow.rgba #smallipop.default { @include boxshadow(0 2px 6px rgba(0, 0, 0, 0.5));} 
+.borderradius #smallipop.default { 
+  @include rounded(12px);
+  .sipContent { @include rounded(12px); } 
+}
+
+/* blue theme */
+#smallipop.blue {
+  background:transparent;
+  border: 10px solid #0064b4;
+  color: #111;
+  font-size:11px;
+  
+  a { color:#2276aa; }
+  
+  .sipContent {
+    border: 0;
+    background: #fefefe;
+  }
+  
+  .sipArrow {
+    bottom: -30px; 
+    border-color: #0064b4 transparent transparent transparent; 
+  }
+  &.sipAlignBottom .sipArrow {
+    top: -30px; 
+    border-color:transparent transparent #0064b4 transparent; 
+  }
+  
+  &.sipPositionedLeft .sipArrow {
+    right: -26px; 
+    border-color:transparent transparent transparent #0064b4; 
+  }
+  &.sipPositionedRight .sipArrow {
+    left: -26px; 
+    border-color:transparent #0064b4 transparent transparent; 
+  }
+}
+.rgba #smallipop.blue { 
+  border-color: rgba(0, 100, 180, 0.9);
+  
+  .sipArrow { border-color:rgba(0, 100, 180, 0.9) transparent transparent transparent; }
+  &.sipAlignBottom .sipArrow { border-color:transparent transparent rgba(0, 100, 180, 0.9) transparent; }
+  &.sipPositionedLeft .sipArrow { border-color:transparent transparent transparent rgba(0, 100, 180, 0.9); }
+  &.sipPositionedRight .sipArrow { border-color:transparent rgba(0, 100, 180, 0.9) transparent transparent; } 
+}
+.boxshadow.rgba #smallipop.blue { @include boxshadow(0 2px 6px rgba(0, 0, 0, 0.5));} 
+.borderradius #smallipop.blue { @include rounded(7px); }
+
+/* black theme */
+#smallipop.black {
+  background-color:#222;
+  border-color:#111;
+  text-shadow:0 -1px 1px #111;
+  color:#f5f5f5;
+  
+  a { color: #eef8ff; text-shadow:0 -1px 1px #111; }
+  
+  .sipContent { border-top:1px solid #666; }
+  .sipArrow { border-color:#222 transparent transparent transparent; }
+  .sipArrowBorder { border-color:#111 transparent transparent transparent; }
+  
+  &.sipAlignBottom {
+    .sipArrow { border-color:transparent transparent #222 transparent; }
+    .sipArrowBorder { border-color:transparent transparent #111 transparent; }
+  }
+  
+  &.sipPositionedLeft {
+    .sipArrow { border-color:transparent transparent transparent #222; }
+    .sipArrowBorder { border-color:transparent transparent transparent #111; }
+  }
+  &.sipPositionedRight {
+    .sipArrow { border-color:transparent #222 transparent transparent; }
+    .sipArrowBorder { border-color:transparent #111 transparent transparent; }
+  }
+}
+.cssgradients #smallipop.black { 
+  background-color:transparent;
+  @include linear-gradient(#333333, #222222); 
+}
+.boxshadow.rgba #smallipop.black { @include boxshadow(0 2px 6px rgba(0, 0, 0, 0.5));} 
+.borderradius #smallipop.black { 
+  @include rounded(5px);
+  .sipContent { @include rounded(5px); } 
+}
+
+/* orange theme */
+#smallipop.orange {
+  background-color:#f9aa18;
+  border-color:#e17500;
+  text-shadow:0 1px 1px #fff24d;
+  color:#714900;
+  
+  a { color: #145d95; text-shadow:0 1px 1px #fff24d; }
+  
+  .sipContent { border-top:1px solid #fffabc; }
+  .sipArrow { border-color:#f9aa18 transparent transparent transparent; }
+  .sipArrowBorder { border-color:#e17500 transparent transparent transparent; }
+  
+  &.sipAlignBottom {
+    .sipArrow { border-color:transparent transparent #f9aa18 transparent; }
+    .sipArrowBorder { border-color:transparent transparent #e17500 transparent; }
+  }
+  
+  &.sipPositionedLeft {
+    .sipArrow { border-color:transparent transparent transparent #f9c718; }
+    .sipArrowBorder { border-color:transparent transparent transparent #e17500; }
+  }
+  &.sipPositionedRight {
+    .sipArrow { border-color:transparent #f9c718 transparent transparent; }
+    .sipArrowBorder { border-color:transparent #e17500 transparent transparent; }
+  }
+}
+.cssgradients #smallipop.orange { 
+  @include linear-gradient(#fff24d, #f9aa18); 
+}
+.boxshadow.rgba #smallipop.orange { @include boxshadow(0 2px 6px rgba(0, 0, 0, 0.5));} 
+.borderradius #smallipop.orange { 
+  @include rounded(10px);
+  .sipContent { @include rounded(10px); } 
+}
+  
+/* white theme */
+#smallipop.white {
+  background-color:#fafafa;
+  border-color:#ccc;
+  text-shadow:0 1px 1px #eee;
+  color:#444;
+  width:200px;
+  max-width:200px;
+  
+  .sipContent { text-align:center; }
+  .sipArrow { border-color:#fafafa transparent transparent transparent; }
+  .sipArrowBorder { border-color:#ccc transparent transparent transparent; }
+  
+  &.sipAlignBottom {
+    .sipArrow { border-color:transparent transparent #fafafa transparent; }
+    .sipArrowBorder { border-color:transparent transparent #ccc transparent; }
+  }
+  
+  &.sipPositionedLeft {
+    .sipArrow { border-color:transparent transparent transparent #fafafa; }
+    .sipArrowBorder { border-color:transparent transparent transparent #ccc; }
+  }
+  &.sipPositionedRight {
+    .sipArrow { border-color:transparent #fafafa transparent transparent; }
+    .sipArrowBorder { border-color:transparent #ccc transparent transparent; }
+  }
+}
+.boxshadow.rgba #smallipop.white { @include boxshadow(0 2px 6px rgba(0, 0, 0, 0.5));} 
+.borderradius #smallipop.white { 
+  @include rounded(12px);
+  .sipContent { @include rounded(12px); } 
+}
+
+/* extension themes. keep at the bottom */
+
+/* white theme extended, requires rgba support */
+.rgba #smallipop.whiteTransparent {
+  background-color:rgba(255, 255, 255, 0.8);
+  .sipArrow { 
+    bottom:-21px; 
+    border-color:rgba(255, 255, 255, 0.8) transparent transparent transparent; 
+  }
+  .sipArrowBorder { border-color:transparent; }
+
+  &.sipAlignBottom .sipArrow { top:-21px; border-color:transparent transparent rgba(255, 255, 255, 0.8) transparent; }
+  &.sipPositionedLeft .sipArrow { border-color:transparent transparent transparent rgba(255, 255, 255, 0.8); }
+  &.sipPositionedRight .sipArrow { border-color:transparent rgba(255, 255, 255, 0.8) transparent transparent; }
+}
+
+
+/* fat shadow extension theme */
+.boxshadow.rgba #smallipop.fatShadow { @include boxshadow(0 2px 20px rgba(0, 0, 0, 0.8));}

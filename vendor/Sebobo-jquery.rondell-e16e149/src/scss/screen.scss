@@ -1,0 +1,243 @@
+@import "mixins";
+@import "base";
+
+/* Demo css */
+
+html {
+  background-image: url('../images/bg.png');
+}
+
+body {
+  height: 100%;
+  font-family: arial;
+  font-size: 1.167em;
+  line-height: 1.4285em;
+  padding: 10px 0 30px;
+}
+
+a { 
+  color:#0d3a8b; 
+  text-decoration: none;
+  
+  &:hover { text-decoration: underline; } 
+}
+img { border: 0; }
+hr { width: 50%; height: 1px; background: #eee; border: 0; margin: 20px 25%; }
+p { margin: 0.6em 0; }
+
+h1, h2, h3, h4, h5, h6 { margin: 0.2em 0 0.6em;  line-height: 1.1em; font-weight: bold; }
+h1 { font-size: 2em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.4em; }
+h5 { font-size: 1.2em; }
+
+em { font-style: italic; }
+strong { font-weight: bold; }
+
+.collapsor { }
+.collapsible { display:none; }
+
+.hidden {
+  display: none;
+}
+
+.js .hideOnJS {
+  display: none;
+}
+.no-js .showOnJS {
+  display: none;
+}
+
+ul { 
+  padding-left:20px;
+  margin: 0.3em 0 ;
+  li { margin: 0.3em 0; list-style: disc; } 
+}
+
+img.inline { margin: 10px; }
+.box-shadow.rgba img.inline { @include box-shadow(0 1px 2px rgba(0, 0, 0, 0.5)); }
+
+.options {
+  th {
+    background: #222;
+    border: 1px solid #111; 
+    padding: 6px 10px;
+    color: #eee;
+    vertical-align: middle;
+  }
+  
+  tr:nth-child(even) { background: #eee; }
+  tr:nth-child(odd) { background: #fff; }
+  
+  td { 
+    border: 1px solid #ddd; 
+    padding: 6px 10px;
+    vertical-align: middle;
+    
+    pre {
+      background: transparent;
+      border: 0;
+    } 
+  }
+}
+
+.hasBorder { border: 4px solid #fff; }
+.hasShadow { 
+  @include box-shadow(0 2px 6px -2px rgba(0, 0, 0, 0.4)); 
+}
+
+.page,
+.pageHeader {
+  margin: 0 auto;
+  width: 920px;
+  background: #fcfcfc; 
+  padding: 1px 30px 30px; 
+  position: relative;
+}
+
+.pageHeader {
+  background: #267be4;
+  color: #fafafa;
+
+  h1 { padding-top: 16px; }
+  
+  p a {
+    color: #fff;
+  }
+  @include border-radius(8px 8px 0 0);
+  @include linear-gradient(#337edc, #0a5abf);
+}
+
+/* rondell demo stuff */
+
+.rondellContainer {
+  display: none;
+}
+
+.rondellContainer {
+  margin: 0 auto;
+}
+
+#rondellMixed { 
+  .controlShiftLeft,
+  .controlShiftRight {
+    opacity: 0.6;
+    position: absolute;
+    left: -100px;
+    top: 168px;
+    
+    &:hover { opacity: 1; }
+  }
+  .controlShiftRight {
+    left: auto;
+    right: -100px;
+  }
+}
+
+/* Sidemenu */
+.side-menu {
+  position: fixed;
+  top: 168px;
+  left: 50%;
+  margin-left: -(460 + 130 + 2 * 30px);
+  padding-top: 30px;
+  text-align: right;
+  width: 140px;
+  font-size: 14px;
+  z-index: 9999;
+  
+  h2 {
+    color: #267BE4;
+    font-size: 16px;
+  }
+  
+  ul {
+    
+  }
+  
+  li {
+    list-style-type: none;
+    a {
+      color: #999;
+      
+      &:hover {
+        color: #333;
+        text-decoration: underline;
+      }
+      
+      &.current {
+        color: #333;
+      } 
+    }
+  }
+}
+
+/* fancybox */
+#fancybox-wrap,
+#fancybox-overlay,
+#fancybox-inner,
+#fancybox-loading div,
+#fancybox-close { 
+  position:absolute; 
+  top:0; left:0;
+}
+#fancybox-loading div, #fancybox-close { background-image: url('../images/fancybox.png'); }
+#fancybox-loading {
+  position:fixed; 
+  top:20%; left:50%; 
+  height:40px; width:40px;
+  margin-top:-20px; margin-left:-20px;
+  overflow:hidden; 
+  z-index:1104; 
+  display:none;
+  
+  div { width:40px; height:480px; }
+}
+#fancybox-content {
+  padding: 10px;
+}
+#fancybox-img {
+  width: inherit;
+  height: inherit;
+}
+#fancybox-overlay { 
+  position:fixed; 
+  bottom:0; right:0; 
+  background:#000; 
+  z-index:1100; 
+  display:none; 
+}
+#fancybox-tmp { overflow:auto; display:none; }
+#fancybox-wrap { 
+  z-index:1101; 
+  display:none; 
+  border:1px solid #eee; 
+  @include border-radius(5px);
+  @include box-shadow(0 1px 12px rgba(0, 0, 0, 0.6)); 
+}
+#fancybox-outer { 
+  position: relative;
+  background: #fefefe;
+  width:100%; height:100%;  
+}
+#fancybox-title {
+  background: #fefefe;
+  padding: 3px 5px;
+}
+#fancybox-close { 
+  top:-15px; right:-15px; left:auto;
+  width:30px; height:30px;
+  cursor:pointer; 
+  z-index:1103; 
+  display:none; 
+  background-position:-40px 0px;
+}
+
+
+/* Tabs */
+.pageHeader .tabs {
+  margin: 0 -30px;
+  width: 933px;
+  padding: 0 10px 0 37px;
+}

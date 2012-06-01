@@ -1,0 +1,37 @@
+{
+    "name": "rondell",
+    "version": "0.9.1",
+    "title": "jQuery.Rondell()",
+    "author": {
+        "name": "Sebastian Helzle",
+        "url": "https://github.com/sebobo"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "MIT-LICENSE.txt"
+        }
+    ],
+    "dependencies": {
+        "jquery": ">=1.5.2",
+        "modernizr": ">=2.0.0",
+        "mousewheel": "*"
+    },
+    "description": "This is a plugin for displaying galeries and other content as carousel or a any form you want.",
+    "keywords": [
+        "carousel",
+        "rondell"
+    ],
+    "homepage": "http://projects.sebastianhelzle.net/jquery.rondell",
+    "contributors": [
+    ],
+    "files": [
+        "lib",
+        "css",
+        "images",
+        "scss",
+        "index.html",
+        "README.md",
+        "Cakefile"
+    ]
+}
