@@ -2,6 +2,8 @@ require 'rss'
 require 'open-uri'
 require 'nokogiri'
 #require 'fileutils'
+require 'date'
+require 'time'
 
 
 item_link = "http://seattle.craigslist.org/oly/zip/3051191219.html"
@@ -30,10 +32,15 @@ f.puts "<ul id=\"tiles\">\n"
 
 open(url) do |rss|
   feed = RSS::Parser.parse(rss)
-  puts "Title: #{feed.channel.title}"
+  # puts "Title: #{feed.channel.title}"
+  start = DateTime.now
+  puts start
   feed.items.each do |item|
-    puts "Item: #{item.title}"
+
+    # puts "Item: #{item.title}"
     #html = Nokogiri::HTML(File.open("Freehottub.htm"))
+    #puts item.link
+    
     html = Nokogiri::HTML(open(item.link))
     
     # The thumbnails come from here, 
@@ -53,6 +60,9 @@ open(url) do |rss|
       end
     end
   end
+  endTime = DateTime.now
+  puts endTime
+  puts endTime - start
 end
 
 
