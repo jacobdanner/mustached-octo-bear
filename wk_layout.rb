@@ -61,7 +61,6 @@ open(url) do |rss|
     end
   end
   endTime = DateTime.now
-  puts endTime
   puts endTime - start
 end
 

@@ -38,28 +38,43 @@ class URLHTMLParser(HTMLParser):
 
 python_html = open("py_demo.html", 'w')
 python_html.write("<!DOCTYPE html>\n<html>\n<head>\n")
-python_html.write("<script type=\"text/javascript\" src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js\"></script>")
-python_html.write("<script type=\"text/javascript\" src=\"https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.js\"></script>")
+python_html.write("<script type=\"text/javascript\" src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js\"></script>\n")
+python_html.write("<script type=\"text/javascript\" src=\"https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.js\"></script>\n")
 
 
-jsTemplate = Template("<script type=\"text/javascript\" src=\"$js1\"></script>")
-jsfiles = glob.glob("vendor/**/*.js")
+jsTemplate = Template("<script type=\"text/javascript\" src=\"$js1\"></script>\n")
+jsfiles = glob.glob("vendor/bootstrap/2.0.3/*/*.js")
+jsfiles.extend(glob.glob("vendor/fancybox/2.0.6/*/*.js"))
+jsfiles.extend(glob.glob("vendor/GBKS-Wookmark-jQuery-25818a8/*.js"))
+jsfiles.extend(glob.glob("vendor/imagesloaded/*/*.js"))
+jsfiles.extend(glob.glob("vendor/jquery/1.7.2/*.js"))
+jsfiles.extend(glob.glob("vendor/*.js"))
+jsfiles.extend(glob.glob("vendor/Sebobo-jquery.rondell-e16e149/*/*.js"))
+jsfiles.extend(glob.glob("vendor/Sebobo-jquery.smallipop-67a3f4a/*/*.js"))
 for js in jsfiles:
   if js[-6:] != "min.js":
-    print(js)
-    python_html.write(jsTemplate.substitute(js1=js))#re.sub("\\", '/', js)))
+    js_replaced = js.replace('\\','/')
+    print(js_replaced)
+    python_html.write(jsTemplate.substitute(js1=js_replaced))#re.sub("\\", '/', js)))
 
-cssTemplate = Template("<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"$css1\" />")
-cssfiles = glob.glob("vendor/**/*.css")
+cssTemplate = Template("<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"$css1\" />\n")
+cssfiles = glob.glob("vendor/bootstrap/2.0.3/*/*.css")
+cssfiles.extend(glob.glob("vendor/**.css"))
+cssfiles.extend(glob.glob("vendor/fancybox/2.0.6/helpers/*.css"))
+cssfiles.extend(glob.glob("vendor/fancybox/2.0.6/*.css"))
+cssfiles.extend(glob.glob("vendor/Sebobo-jquery.rondell-e16e149/**/*.css"))
+cssfiles.extend(glob.glob("vendor/Sebobo-jquery.smallipop-67a3f4a/**/*.css"))
+cssfiles.extend(glob.glob("vendor/**/**/**/**/**/*.css"))
 for css in cssfiles:
   if css[-7:] != "min.css":
-    print(css)
-    python_html.write(cssTemplate.substitute(css1=css))#re.sub('\','\/', css)))
+    css_replaced = css.replace('\\','/')
+    print(css_replaced)
+    python_html.write(cssTemplate.substitute(css1=css_replaced))#re.sub('\','\/', css)))
 
 python_html.write("</head>\n<body>\n")
 python_html.write("<div id=\"container\">\n<header><h1> Python example using jquery wookmark</h1>\n")
 python_html.write("<p>Resize and/or click on item to trigger updates</p>\n")
-python_html.write("</header>\n</div>")
+python_html.write("</header>\n</div>\n")
 python_html.write("<div id=\"main\" role=\"main\">\n")
 python_html.write("<ul id=\"tiles\">\n")
 
